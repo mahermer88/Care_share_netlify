@@ -1,0 +1,45 @@
+.assistant {
+  z-index: 3;
+  position: sticky;
+  top: 90%;
+  right: 1%;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+.assistant img {
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid var(--clr-yellow-3);
+  border-radius: 5rem;
+}
+.assistant img:hover {
+  border-color: var(--clr-yellow-2);
+}
+.assistant-content {
+  overflow: hidden;
+  max-width: 15rem;
+  max-height: 5rem;
+  font-size: 1.1rem;
+  color: white;
+  background-color: var(--clr-yellow-3);
+  padding: 0.2rem;
+  border-radius: var(--radius-small);
+}
+
+@media screen and (min-width: 800px) {
+  .assistant {
+    z-index: 3;
+    position: sticky;
+    top: 85%;
+  }
+  .assistant img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .assistant-content {
+    padding: var(--padding-small) var(--padding-large);
+  }
+}

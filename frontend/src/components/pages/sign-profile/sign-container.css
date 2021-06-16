@@ -1,0 +1,47 @@
+.cart-profile-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-large);
+}
+
+/* top row */
+.register-signIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+}
+.register,
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: var(--margin-large);
+}
+.register-signIn .btn,
+.register-signIn form {
+  margin: 0;
+}
+.register-signIn a {
+  margin: var(--margin-large);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--clr-purple-1);
+}
+
+@media screen and (min-width: 800px) {
+  .cart-profile-container {
+    margin: var(--margin-large);
+  }
+  .register-signIn {
+    flex-direction: row;
+  }
+  .register,
+  .sign-in {
+    width: 40%;
+  }
+  .register-signIn a {
+    margin: var(--margin-large);
+    font-style: italic;
+  }
+}

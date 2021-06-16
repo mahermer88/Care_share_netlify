@@ -1,0 +1,119 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-large);
+  color: var(--clr-purple-1);
+  margin-bottom: 3rem;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.details-info h1 {
+  padding-bottom: var(--padding-large);
+  border-bottom: 1px solid var(--clr-black);
+}
+
+/* message and team */
+.details-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+form input {
+  border: 1px solid var(--clr-black);
+  padding: var(--padding-large);
+  border-radius: var(--radius-large);
+}
+#messageText {
+  padding: var(--padding-large);
+  height: 10rem;
+  border: 1px solid var(--clr-black);
+  border-radius: var(--radius-large);
+}
+.form-control {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: center;
+  margin: var(--margin-large) 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--clr-purple-1);
+  color: var(--clr-white);
+  border-radius: var(--radius-large);
+  padding: 1.2rem;
+  margin: var(--margin-small);
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  box-shadow: var(--dark-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--clr-yellow-2);
+  color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+
+@media screen and (min-width: 800px) {
+  .details-info {
+    width: 60%;
+  }
+  .message {
+    width: 35%;
+  }
+  .btn {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+  }
+  .details-contact {
+    flex-direction: row;
+  }
+  .team {
+    width: 50%;
+  }
+  .team-center {
+    height: 30rem;
+  }
+  .person-img {
+    height: 18rem;
+    width: 18rem;
+  }
+  .team .prev,
+  .team .next {
+    top: 13rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (min-height: 840px) {
+  .team-center {
+    height: 40rem;
+  }
+  .person-img {
+    height: 25rem;
+    width: 25rem;
+  }
+  .team article h4 {
+    font-size: 1.3rem;
+  }
+  .team .prev,
+  .team .next {
+    top: 18rem;
+  }
+}
