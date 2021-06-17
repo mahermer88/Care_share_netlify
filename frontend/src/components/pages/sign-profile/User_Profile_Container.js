@@ -1,5 +1,6 @@
 import React from "react";
 import { useAssistantContext } from "../../context/context-assistant";
+import { useUserContext } from "../../context/context-user";
 import ProfileMessageItem from "./Profile_Message_Item";
 import ProfileWishItem from "./Profile_Wish_Item";
 import deleteUser from "../../handlers/handle-backend/handle-delete-user";
@@ -9,6 +10,7 @@ import "./profile-container.css";
 
 const UserProfileContainer = ({ user }) => {
   const { username, email, createdAt, messages, wishlist } = user;
+  const { dispatchUser } = useUserContext();
   const { dispatchAssistant } = useAssistantContext();
 
   return (
@@ -27,7 +29,7 @@ const UserProfileContainer = ({ user }) => {
         <div className="user-account-btn">
           <button
             className="btn"
-            onClick={() => deleteUser(user, dispatchAssistant)}
+            onClick={() => deleteUser(user, dispatchUser, dispatchAssistant)}
           >
             Delete Account
           </button>

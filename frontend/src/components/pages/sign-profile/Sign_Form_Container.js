@@ -64,7 +64,7 @@ const SignFormContainer = () => {
           <div className="form-control">
             <label htmlFor="email">Password: </label>
             <input
-              type="text"
+              type="password"
               name="password"
               value={register.password}
               onChange={handleRegisterForm}
@@ -102,7 +102,7 @@ const SignFormContainer = () => {
           <div className="form-control">
             <label htmlFor="email">Password: </label>
             <input
-              type="text"
+              type="password"
               name="password"
               value={user.password}
               onChange={handleSignInForm}

@@ -1,4 +1,4 @@
-const deleteUser = async (user, dispatchAssistant) => {
+const deleteUser = async (user, dispatchUser, dispatchAssistant) => {
   try {
     const res = await fetch(
       `https://mighty-badlands-17333.herokuapp.com/api/users/${user._id}`,
@@ -11,6 +11,8 @@ const deleteUser = async (user, dispatchAssistant) => {
       dispatchAssistant({ type: "ERROR", payload: data.err });
       throw new Error(data.message);
     } else {
+      localStorage.removeItem("user");
+      dispatchUser({ type: "RESET" });
       return data;
     }
   } catch (err) {
